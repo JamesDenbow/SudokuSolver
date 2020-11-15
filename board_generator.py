@@ -58,19 +58,8 @@ def generator():
             new_board[rand_element_row][rand_element_col] = rand_element
             i += 1
     start_board = copy.deepcopy(new_board)
-    print(new_board, "\n \n")
     #If generated board cannot be solved, start generator over
     if solve(new_board) == False:
         start_board = generator()
     #Return generated board
-    print(new_board, "\n \n")
-    return start_board
-
-
-
-
-
-
-
-
-generator()
+    return start_board, new_board
