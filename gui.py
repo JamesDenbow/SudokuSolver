@@ -16,7 +16,6 @@ class Ui_MainWindow(object):
     def __init__(self):
         self.start_board = []
         self.answer_board = []
-        self.test = 0
 
     def lockinAnswer(self, i, j, number, color):
         colorLine = "color: " + color + ";"
@@ -355,12 +354,12 @@ class Ui_MainWindow(object):
                 self.Box_8x8.setStyleSheet(colorLine)
 
     def puzzleSetup(self):
-        start_board, answer_board = generator()
-        for i in range(len(start_board)):
-            for j in range(len(start_board[0])):
+        self.start_board, self.answer_board = generator()
+        for i in range(len(self.start_board)):
+            for j in range(len(self.start_board[0])):
                 #If board location is 0 it is empty
-                if start_board[i][j] != 0:
-                    number = str(start_board[i][j])
+                if self.start_board[i][j] != 0:
+                    number = str(self.start_board[i][j])
                     color = "black"
                     self.lockinAnswer(i, j, number, color)
 
@@ -368,250 +367,913 @@ class Ui_MainWindow(object):
         self.Box_8x8.setEnabled(True)
         self.Box_8x8.setPlaceholderText("")
         self.Box_8x8.clear()
+        self.Box_8x8.setStyleSheet("color: black;")
         self.Box_8x7.setEnabled(True)
         self.Box_8x7.setPlaceholderText("")
         self.Box_8x7.clear()
+        self.Box_8x7.setStyleSheet("color: black;")
         self.Box_8x6.setEnabled(True)
         self.Box_8x6.setPlaceholderText("")
         self.Box_8x6.clear()
+        self.Box_8x6.setStyleSheet("color: black;")
         self.Box_8x5.setEnabled(True)
         self.Box_8x5.setPlaceholderText("")
         self.Box_8x5.clear()
+        self.Box_8x5.setStyleSheet("color: black;")
         self.Box_8x4.setEnabled(True)
         self.Box_8x4.setPlaceholderText("")
         self.Box_8x4.clear()
+        self.Box_8x4.setStyleSheet("color: black;")
         self.Box_8x3.setEnabled(True)
         self.Box_8x3.setPlaceholderText("")
         self.Box_8x3.clear()
+        self.Box_8x3.setStyleSheet("color: black;")
         self.Box_8x2.setEnabled(True)
         self.Box_8x2.setPlaceholderText("")
         self.Box_8x2.clear()
+        self.Box_8x2.setStyleSheet("color: black;")
         self.Box_8x1.setEnabled(True)
         self.Box_8x1.setPlaceholderText("")
         self.Box_8x1.clear()
+        self.Box_8x1.setStyleSheet("color: black;")
         self.Box_8x0.setEnabled(True)
         self.Box_8x0.setPlaceholderText("")
         self.Box_8x0.clear()
+        self.Box_8x0.setStyleSheet("color: black;")
         self.Box_7x8.setEnabled(True)
         self.Box_7x8.setPlaceholderText("")
         self.Box_7x8.clear()
+        self.Box_7x8.setStyleSheet("color: black;")
         self.Box_7x7.setEnabled(True)
         self.Box_7x7.setPlaceholderText("")
         self.Box_7x7.clear()
+        self.Box_7x7.setStyleSheet("color: black;")
         self.Box_7x6.setEnabled(True)
         self.Box_7x6.setPlaceholderText("")
         self.Box_7x6.clear()
+        self.Box_7x6.setStyleSheet("color: black;")
         self.Box_7x5.setEnabled(True)
         self.Box_7x5.setPlaceholderText("")
         self.Box_7x5.clear()
+        self.Box_7x5.setStyleSheet("color: black;")
         self.Box_7x4.setEnabled(True)
         self.Box_7x4.setPlaceholderText("")
         self.Box_7x4.clear()
+        self.Box_7x4.setStyleSheet("color: black;")
         self.Box_7x3.setEnabled(True)
         self.Box_7x3.setPlaceholderText("")
         self.Box_7x3.clear()
+        self.Box_7x3.setStyleSheet("color: black;")
         self.Box_7x2.setEnabled(True)
         self.Box_7x2.setPlaceholderText("")
         self.Box_7x2.clear()
+        self.Box_7x2.setStyleSheet("color: black;")
         self.Box_7x1.setEnabled(True)
         self.Box_7x1.setPlaceholderText("")
         self.Box_7x1.clear()
+        self.Box_7x1.setStyleSheet("color: black;")
         self.Box_7x0.setEnabled(True)
         self.Box_7x0.setPlaceholderText("")
         self.Box_7x0.clear()
+        self.Box_7x0.setStyleSheet("color: black;")
         self.Box_6x8.setEnabled(True)
         self.Box_6x8.setPlaceholderText("")
         self.Box_6x8.clear()
+        self.Box_6x8.setStyleSheet("color: black;")
         self.Box_6x7.setEnabled(True)
         self.Box_6x7.setPlaceholderText("")
         self.Box_6x7.clear()
+        self.Box_6x7.setStyleSheet("color: black;")
         self.Box_6x6.setEnabled(True)
         self.Box_6x6.setPlaceholderText("")
         self.Box_6x6.clear()
+        self.Box_6x6.setStyleSheet("color: black;")
         self.Box_6x5.setEnabled(True)
         self.Box_6x5.setPlaceholderText("")
         self.Box_6x5.clear()
+        self.Box_6x5.setStyleSheet("color: black;")
         self.Box_6x4.setEnabled(True)
         self.Box_6x4.setPlaceholderText("")
         self.Box_6x4.clear()
+        self.Box_6x4.setStyleSheet("color: black;")
         self.Box_6x3.setEnabled(True)
         self.Box_6x3.setPlaceholderText("")
         self.Box_6x3.clear()
+        self.Box_6x3.setStyleSheet("color: black;")
         self.Box_6x2.setEnabled(True)
         self.Box_6x2.setPlaceholderText("")
         self.Box_6x2.clear()
+        self.Box_6x2.setStyleSheet("color: black;")
         self.Box_6x1.setEnabled(True)
         self.Box_6x1.setPlaceholderText("")
         self.Box_6x1.clear()
+        self.Box_6x1.setStyleSheet("color: black;")
         self.Box_6x0.setEnabled(True)
         self.Box_6x0.setPlaceholderText("")
         self.Box_6x0.clear()
+        self.Box_6x0.setStyleSheet("color: black;")
         self.Box_5x8.setEnabled(True)
         self.Box_5x8.setPlaceholderText("")
         self.Box_5x8.clear()
+        self.Box_5x8.setStyleSheet("color: black;")
         self.Box_5x7.setEnabled(True)
         self.Box_5x7.setPlaceholderText("")
         self.Box_5x7.clear()
+        self.Box_5x7.setStyleSheet("color: black;")
         self.Box_5x6.setEnabled(True)
         self.Box_5x6.setPlaceholderText("")
         self.Box_5x6.clear()
+        self.Box_5x6.setStyleSheet("color: black;")
         self.Box_5x5.setEnabled(True)
         self.Box_5x5.setPlaceholderText("")
         self.Box_5x5.clear()
+        self.Box_5x5.setStyleSheet("color: black;")
         self.Box_5x4.setEnabled(True)
         self.Box_5x4.setPlaceholderText("")
         self.Box_5x4.clear()
+        self.Box_5x4.setStyleSheet("color: black;")
         self.Box_5x3.setEnabled(True)
         self.Box_5x3.setPlaceholderText("")
         self.Box_5x3.clear()
+        self.Box_5x3.setStyleSheet("color: black;")
         self.Box_5x2.setEnabled(True)
         self.Box_5x2.setPlaceholderText("")
         self.Box_5x2.clear()
+        self.Box_5x2.setStyleSheet("color: black;")
         self.Box_5x1.setEnabled(True)
         self.Box_5x1.setPlaceholderText("")
         self.Box_5x1.clear()
+        self.Box_5x1.setStyleSheet("color: black;")
         self.Box_5x0.setEnabled(True)
         self.Box_5x0.setPlaceholderText("")
         self.Box_5x0.clear()
+        self.Box_5x0.setStyleSheet("color: black;")
         self.Box_4x8.setEnabled(True)
         self.Box_4x8.setPlaceholderText("")
         self.Box_4x8.clear()
+        self.Box_4x8.setStyleSheet("color: black;")
         self.Box_4x7.setEnabled(True)
         self.Box_4x7.setPlaceholderText("")
         self.Box_4x7.clear()
+        self.Box_4x7.setStyleSheet("color: black;")
         self.Box_4x6.setEnabled(True)
         self.Box_4x6.setPlaceholderText("")
         self.Box_4x6.clear()
+        self.Box_4x6.setStyleSheet("color: black;")
         self.Box_4x5.setEnabled(True)
         self.Box_4x5.setPlaceholderText("")
         self.Box_4x5.clear()
+        self.Box_4x5.setStyleSheet("color: black;")
         self.Box_4x4.setEnabled(True)
         self.Box_4x4.setPlaceholderText("")
         self.Box_4x4.clear()
+        self.Box_4x4.setStyleSheet("color: black;")
         self.Box_4x3.setEnabled(True)
         self.Box_4x3.setPlaceholderText("")
         self.Box_4x3.clear()
+        self.Box_4x3.setStyleSheet("color: black;")
         self.Box_4x2.setEnabled(True)
         self.Box_4x2.setPlaceholderText("")
         self.Box_4x2.clear()
+        self.Box_4x2.setStyleSheet("color: black;")
         self.Box_4x1.setEnabled(True)
         self.Box_4x1.setPlaceholderText("")
         self.Box_4x1.clear()
+        self.Box_4x1.setStyleSheet("color: black;")
         self.Box_4x0.setEnabled(True)
         self.Box_4x0.setPlaceholderText("")
         self.Box_4x0.clear()
+        self.Box_4x0.setStyleSheet("color: black;")
         self.Box_3x8.setEnabled(True)
         self.Box_3x8.setPlaceholderText("")
         self.Box_3x8.clear()
+        self.Box_3x8.setStyleSheet("color: black;")
         self.Box_3x7.setEnabled(True)
         self.Box_3x7.setPlaceholderText("")
         self.Box_3x7.clear()
+        self.Box_3x7.setStyleSheet("color: black;")
         self.Box_3x6.setEnabled(True)
         self.Box_3x6.setPlaceholderText("")
         self.Box_3x6.clear()
+        self.Box_3x6.setStyleSheet("color: black;")
         self.Box_3x5.setEnabled(True)
         self.Box_3x5.setPlaceholderText("")
         self.Box_3x5.clear()
+        self.Box_3x5.setStyleSheet("color: black;")
         self.Box_3x4.setEnabled(True)
         self.Box_3x4.setPlaceholderText("")
         self.Box_3x4.clear()
+        self.Box_3x4.setStyleSheet("color: black;")
         self.Box_3x3.setEnabled(True)
         self.Box_3x3.setPlaceholderText("")
         self.Box_3x3.clear()
+        self.Box_3x3.setStyleSheet("color: black;")
         self.Box_3x2.setEnabled(True)
         self.Box_3x2.setPlaceholderText("")
         self.Box_3x2.clear()
+        self.Box_3x2.setStyleSheet("color: black;")
         self.Box_3x1.setEnabled(True)
         self.Box_3x1.setPlaceholderText("")
         self.Box_3x1.clear()
+        self.Box_3x1.setStyleSheet("color: black;")
         self.Box_3x0.setEnabled(True)
         self.Box_3x0.setPlaceholderText("")
         self.Box_3x0.clear()
+        self.Box_3x0.setStyleSheet("color: black;")
         self.Box_2x8.setEnabled(True)
         self.Box_2x8.setPlaceholderText("")
         self.Box_2x8.clear()
+        self.Box_2x8.setStyleSheet("color: black;")
         self.Box_2x7.setEnabled(True)
         self.Box_2x7.setPlaceholderText("")
         self.Box_2x7.clear()
+        self.Box_2x7.setStyleSheet("color: black;")
         self.Box_2x6.setEnabled(True)
         self.Box_2x6.setPlaceholderText("")
         self.Box_2x6.clear()
+        self.Box_2x6.setStyleSheet("color: black;")
         self.Box_2x5.setEnabled(True)
         self.Box_2x5.setPlaceholderText("")
         self.Box_2x5.clear()
+        self.Box_2x5.setStyleSheet("color: black;")
         self.Box_2x4.setEnabled(True)
         self.Box_2x4.setPlaceholderText("")
         self.Box_2x4.clear()
+        self.Box_2x4.setStyleSheet("color: black;")
         self.Box_2x3.setEnabled(True)
         self.Box_2x3.setPlaceholderText("")
         self.Box_2x3.clear()
+        self.Box_2x3.setStyleSheet("color: black;")
         self.Box_2x2.setEnabled(True)
         self.Box_2x2.setPlaceholderText("")
         self.Box_2x2.clear()
+        self.Box_2x2.setStyleSheet("color: black;")
         self.Box_2x1.setEnabled(True)
         self.Box_2x1.setPlaceholderText("")
         self.Box_2x1.clear()
+        self.Box_2x1.setStyleSheet("color: black;")
         self.Box_2x0.setEnabled(True)
         self.Box_2x0.setPlaceholderText("")
         self.Box_2x0.clear()
+        self.Box_2x0.setStyleSheet("color: black;")
         self.Box_1x8.setEnabled(True)
         self.Box_1x8.setPlaceholderText("")
         self.Box_1x8.clear()
+        self.Box_1x8.setStyleSheet("color: black;")
         self.Box_1x7.setEnabled(True)
         self.Box_1x7.setPlaceholderText("")
         self.Box_1x7.clear()
+        self.Box_1x7.setStyleSheet("color: black;")
         self.Box_1x6.setEnabled(True)
         self.Box_1x6.setPlaceholderText("")
         self.Box_1x6.clear()
+        self.Box_1x6.setStyleSheet("color: black;")
         self.Box_1x5.setEnabled(True)
         self.Box_1x5.setPlaceholderText("")
         self.Box_1x5.clear()
+        self.Box_1x5.setStyleSheet("color: black;")
         self.Box_1x4.setEnabled(True)
         self.Box_1x4.setPlaceholderText("")
         self.Box_1x4.clear()
+        self.Box_1x4.setStyleSheet("color: black;")
         self.Box_1x3.setEnabled(True)
         self.Box_1x3.setPlaceholderText("")
         self.Box_1x3.clear()
+        self.Box_1x3.setStyleSheet("color: black;")
         self.Box_1x2.setEnabled(True)
         self.Box_1x2.setPlaceholderText("")
         self.Box_1x2.clear()
+        self.Box_1x2.setStyleSheet("color: black;")
         self.Box_1x1.setEnabled(True)
         self.Box_1x1.setPlaceholderText("")
         self.Box_1x1.clear()
+        self.Box_1x1.setStyleSheet("color: black;")
         self.Box_1x0.setEnabled(True)
         self.Box_1x0.setPlaceholderText("")
         self.Box_1x0.clear()
+        self.Box_1x0.setStyleSheet("color: black;")
         self.Box_0x8.setEnabled(True)
         self.Box_0x8.setPlaceholderText("")
         self.Box_0x8.clear()
+        self.Box_0x8.setStyleSheet("color: black;")
         self.Box_0x7.setEnabled(True)
         self.Box_0x7.setPlaceholderText("")
         self.Box_0x7.clear()
+        self.Box_0x7.setStyleSheet("color: black;")
         self.Box_0x6.setEnabled(True)
         self.Box_0x6.setPlaceholderText("")
         self.Box_0x6.clear()
+        self.Box_0x6.setStyleSheet("color: black;")
         self.Box_0x5.setEnabled(True)
         self.Box_0x5.setPlaceholderText("")
         self.Box_0x5.clear()
+        self.Box_0x5.setStyleSheet("color: black;")
         self.Box_0x4.setEnabled(True)
         self.Box_0x4.setPlaceholderText("")
         self.Box_0x4.clear()
+        self.Box_0x4.setStyleSheet("color: black;")
         self.Box_0x3.setEnabled(True)
         self.Box_0x3.setPlaceholderText("")
         self.Box_0x3.clear()
+        self.Box_0x3.setStyleSheet("color: black;")
         self.Box_0x2.setEnabled(True)
         self.Box_0x2.setPlaceholderText("")
         self.Box_0x2.clear()
+        self.Box_0x2.setStyleSheet("color: black;")
         self.Box_0x1.setEnabled(True)
         self.Box_0x1.setPlaceholderText("")
         self.Box_0x1.clear()
+        self.Box_0x1.setStyleSheet("color: black;")
         self.Box_0x0.setEnabled(True)
         self.Box_0x0.setPlaceholderText("")
         self.Box_0x0.clear()
+        self.Box_0x0.setStyleSheet("color: black;")
 
     def newPuzzleClick(self, MainWindow):
         self.clearBoard()
         self.puzzleSetup()
+
+    def checkAnswersClick(self, MainWindow):
+        colorLine = "color: green;"
+        for i in range(len(self.answer_board)):
+            for j in range(len(self.answer_board[0])):
+                number = int(self.answer_board[i][j])
+                if i == 0:
+                    if j == 0:
+                        input = self.Box_0x0.text()
+                        if input != '':
+                            if int(input) == number and self.Box_0x0.isEnabled():
+                                self.Box_0x0.setEnabled(False)
+                                self.Box_0x0.setPlaceholderText(str(number))
+                                self.Box_0x0.setStyleSheet(colorLine)
+                    elif j == 1:
+                        input = self.Box_0x1.text()
+                        if input != '':
+                            if int(input) == number and self.Box_0x1.isEnabled():
+                                self.Box_0x1.setEnabled(False)
+                                self.Box_0x1.setPlaceholderText(str(number))
+                                self.Box_0x1.setStyleSheet(colorLine)
+                    elif j == 2:
+                        input = self.Box_0x2.text()
+                        if input != '':
+                            if int(input) == number and self.Box_0x2.isEnabled():
+                                self.Box_0x2.setEnabled(False)
+                                self.Box_0x2.setPlaceholderText(str(number))
+                                self.Box_0x2.setStyleSheet(colorLine)
+                    elif j == 3:
+                        input = self.Box_0x3.text()
+                        if input != '':
+                            if int(input) == number and self.Box_0x3.isEnabled():
+                                self.Box_0x3.setEnabled(False)
+                                self.Box_0x3.setPlaceholderText(str(number))
+                                self.Box_0x3.setStyleSheet(colorLine)
+                    elif j == 4:
+                        input = self.Box_0x4.text()
+                        if input != '':
+                            if int(input) == number and self.Box_0x4.isEnabled():
+                                self.Box_0x4.setEnabled(False)
+                                self.Box_0x4.setPlaceholderText(str(number))
+                                self.Box_0x4.setStyleSheet(colorLine)
+                    elif j == 5:
+                        input = self.Box_0x5.text()
+                        if input != '':
+                            if int(input) == number and self.Box_0x5.isEnabled():
+                                self.Box_0x5.setEnabled(False)
+                                self.Box_0x5.setPlaceholderText(str(number))
+                                self.Box_0x5.setStyleSheet(colorLine)
+                    elif j == 6:
+                        input = self.Box_0x6.text()
+                        if input != '':
+                            if int(input) == number and self.Box_0x6.isEnabled():
+                                self.Box_0x6.setEnabled(False)
+                                self.Box_0x6.setPlaceholderText(str(number))
+                                self.Box_0x6.setStyleSheet(colorLine)
+                    elif j == 7:
+                        input = self.Box_0x7.text()
+                        if input != '':
+                            if int(input) == number and self.Box_0x7.isEnabled():
+                                self.Box_0x7.setEnabled(False)
+                                self.Box_0x7.setPlaceholderText(str(number))
+                                self.Box_0x7.setStyleSheet(colorLine)
+                    elif j == 8:
+                        input = self.Box_0x8.text()
+                        if input != '':
+                            if int(input) == number and self.Box_0x8.isEnabled():
+                                self.Box_0x8.setEnabled(False)
+                                self.Box_0x8.setPlaceholderText(str(number))
+                                self.Box_0x8.setStyleSheet(colorLine)
+                elif i == 1:
+                    if j == 0:
+                        input = self.Box_1x0.text()
+                        if input != '':
+                            if int(input) == number and self.Box_1x0.isEnabled():
+                                self.Box_1x0.setEnabled(False)
+                                self.Box_1x0.setPlaceholderText(str(number))
+                                self.Box_1x0.setStyleSheet(colorLine)
+                    elif j == 1:
+                        input = self.Box_1x1.text()
+                        if input != '':
+                            if int(input) == number and self.Box_1x1.isEnabled():
+                                self.Box_1x1.setEnabled(False)
+                                self.Box_1x1.setPlaceholderText(str(number))
+                                self.Box_1x1.setStyleSheet(colorLine)
+                    elif j == 2:
+                        input = self.Box_1x2.text()
+                        if input != '':
+                            if int(input) == number and self.Box_1x2.isEnabled():
+                                self.Box_1x2.setEnabled(False)
+                                self.Box_1x2.setPlaceholderText(str(number))
+                                self.Box_1x2.setStyleSheet(colorLine)
+                    elif j == 3:
+                        input = self.Box_1x3.text()
+                        if input != '':
+                            if int(input) == number and self.Box_1x3.isEnabled():
+                                self.Box_1x3.setEnabled(False)
+                                self.Box_1x3.setPlaceholderText(str(number))
+                                self.Box_1x3.setStyleSheet(colorLine)
+                    elif j == 4:
+                        input = self.Box_1x4.text()
+                        if input != '':
+                            if int(input) == number and self.Box_1x4.isEnabled():
+                                self.Box_1x4.setEnabled(False)
+                                self.Box_1x4.setPlaceholderText(str(number))
+                                self.Box_1x4.setStyleSheet(colorLine)
+                    elif j == 5:
+                        input = self.Box_1x5.text()
+                        if input != '':
+                            if int(input) == number and self.Box_1x5.isEnabled():
+                                self.Box_1x5.setEnabled(False)
+                                self.Box_1x5.setPlaceholderText(str(number))
+                                self.Box_1x5.setStyleSheet(colorLine)
+                    elif j == 6:
+                        input = self.Box_1x6.text()
+                        if input != '':
+                            if int(input) == number and self.Box_1x6.isEnabled():
+                                self.Box_1x6.setEnabled(False)
+                                self.Box_1x6.setPlaceholderText(str(number))
+                                self.Box_1x6.setStyleSheet(colorLine)
+                    elif j == 7:
+                        input = self.Box_1x7.text()
+                        if input != '':
+                            if int(input) == number and self.Box_1x7.isEnabled():
+                                self.Box_1x7.setEnabled(False)
+                                self.Box_1x7.setPlaceholderText(str(number))
+                                self.Box_1x7.setStyleSheet(colorLine)
+                    elif j == 8:
+                        input = self.Box_1x8.text()
+                        if input != '':
+                            if int(input) == number and self.Box_1x8.isEnabled():
+                                self.Box_1x8.setEnabled(False)
+                                self.Box_1x8.setPlaceholderText(str(number))
+                                self.Box_1x8.setStyleSheet(colorLine)
+                elif i == 2:
+                    if j == 0:
+                        input = self.Box_2x0.text()
+                        if input != '':
+                            if int(input) == number and self.Box_2x0.isEnabled():
+                                self.Box_2x0.setEnabled(False)
+                                self.Box_2x0.setPlaceholderText(str(number))
+                                self.Box_2x0.setStyleSheet(colorLine)
+                    elif j == 1:
+                        input = self.Box_2x1.text()
+                        if input != '':
+                            if int(input) == number and self.Box_2x1.isEnabled():
+                                self.Box_2x1.setEnabled(False)
+                                self.Box_2x1.setPlaceholderText(str(number))
+                                self.Box_2x1.setStyleSheet(colorLine)
+                    elif j == 2:
+                        input = self.Box_2x2.text()
+                        if input != '':
+                            if int(input) == number and self.Box_2x2.isEnabled():
+                                self.Box_2x2.setEnabled(False)
+                                self.Box_2x2.setPlaceholderText(str(number))
+                                self.Box_2x2.setStyleSheet(colorLine)
+                    elif j == 3:
+                        input = self.Box_2x3.text()
+                        if input != '':
+                            if int(input) == number and self.Box_2x3.isEnabled():
+                                self.Box_2x3.setEnabled(False)
+                                self.Box_2x3.setPlaceholderText(str(number))
+                                self.Box_2x3.setStyleSheet(colorLine)
+                    elif j == 4:
+                        input = self.Box_2x4.text()
+                        if input != '':
+                            if int(input) == number and self.Box_2x4.isEnabled():
+                                self.Box_2x4.setEnabled(False)
+                                self.Box_2x4.setPlaceholderText(str(number))
+                                self.Box_2x4.setStyleSheet(colorLine)
+                    elif j == 5:
+                        input = self.Box_2x5.text()
+                        if input != '':
+                            if int(input) == number and self.Box_2x5.isEnabled():
+                                self.Box_2x5.setEnabled(False)
+                                self.Box_2x5.setPlaceholderText(str(number))
+                                self.Box_2x5.setStyleSheet(colorLine)
+                    elif j == 6:
+                        input = self.Box_2x6.text()
+                        if input != '':
+                            if int(input) == number and self.Box_2x6.isEnabled():
+                                self.Box_2x6.setEnabled(False)
+                                self.Box_2x6.setPlaceholderText(str(number))
+                                self.Box_2x6.setStyleSheet(colorLine)
+                    elif j == 7:
+                        input = self.Box_2x7.text()
+                        if input != '':
+                            if int(input) == number and self.Box_2x7.isEnabled():
+                                self.Box_2x7.setEnabled(False)
+                                self.Box_2x7.setPlaceholderText(str(number))
+                                self.Box_2x7.setStyleSheet(colorLine)
+                    elif j == 8:
+                        input = self.Box_2x8.text()
+                        if input != '':
+                            if int(input) == number and self.Box_2x8.isEnabled():
+                                self.Box_2x8.setEnabled(False)
+                                self.Box_2x8.setPlaceholderText(str(number))
+                                self.Box_2x8.setStyleSheet(colorLine)
+                elif i == 3:
+                    if j == 0:
+                        input = self.Box_3x0.text()
+                        if input != '':
+                            if int(input) == number and self.Box_3x0.isEnabled():
+                                self.Box_3x0.setEnabled(False)
+                                self.Box_3x0.setPlaceholderText(str(number))
+                                self.Box_3x0.setStyleSheet(colorLine)
+                    elif j == 1:
+                        input = self.Box_3x1.text()
+                        if input != '':
+                            if int(input) == number and self.Box_3x1.isEnabled():
+                                self.Box_3x1.setEnabled(False)
+                                self.Box_3x1.setPlaceholderText(str(number))
+                                self.Box_3x1.setStyleSheet(colorLine)
+                    elif j == 2:
+                        input = self.Box_3x2.text()
+                        if input != '':
+                            if int(input) == number and self.Box_3x2.isEnabled():
+                                self.Box_3x2.setEnabled(False)
+                                self.Box_3x2.setPlaceholderText(str(number))
+                                self.Box_3x2.setStyleSheet(colorLine)
+                    elif j == 3:
+                        input = self.Box_3x3.text()
+                        if input != '':
+                            if int(input) == number and self.Box_3x3.isEnabled():
+                                self.Box_3x3.setEnabled(False)
+                                self.Box_3x3.setPlaceholderText(str(number))
+                                self.Box_3x3.setStyleSheet(colorLine)
+                    elif j == 4:
+                        input = self.Box_3x4.text()
+                        if input != '':
+                            if int(input) == number and self.Box_3x4.isEnabled():
+                                self.Box_3x4.setEnabled(False)
+                                self.Box_3x4.setPlaceholderText(str(number))
+                                self.Box_3x4.setStyleSheet(colorLine)
+                    elif j == 5:
+                        input = self.Box_3x5.text()
+                        if input != '':
+                            if int(input) == number and self.Box_3x5.isEnabled():
+                                self.Box_3x5.setEnabled(False)
+                                self.Box_3x5.setPlaceholderText(str(number))
+                                self.Box_3x5.setStyleSheet(colorLine)
+                    elif j == 6:
+                        input = self.Box_3x6.text()
+                        if input != '':
+                            if int(input) == number and self.Box_3x6.isEnabled():
+                                self.Box_3x6.setEnabled(False)
+                                self.Box_3x6.setPlaceholderText(str(number))
+                                self.Box_3x6.setStyleSheet(colorLine)
+                    elif j == 7:
+                        input = self.Box_3x7.text()
+                        if input != '':
+                            if int(input) == number and self.Box_3x7.isEnabled():
+                                self.Box_3x7.setEnabled(False)
+                                self.Box_3x7.setPlaceholderText(str(number))
+                                self.Box_3x7.setStyleSheet(colorLine)
+                    elif j == 8:
+                        input = self.Box_3x8.text()
+                        if input != '':
+                            if int(input) == number and self.Box_3x8.isEnabled():
+                                self.Box_3x8.setEnabled(False)
+                                self.Box_3x8.setPlaceholderText(str(number))
+                                self.Box_3x8.setStyleSheet(colorLine)
+                elif i == 4:
+                    if j == 0:
+                        input = self.Box_4x0.text()
+                        if input != '':
+                            if int(input) == number and self.Box_4x0.isEnabled():
+                                self.Box_4x0.setEnabled(False)
+                                self.Box_4x0.setPlaceholderText(str(number))
+                                self.Box_4x0.setStyleSheet(colorLine)
+                    elif j == 1:
+                        input = self.Box_4x1.text()
+                        if input != '':
+                            if int(input) == number and self.Box_4x1.isEnabled():
+                                self.Box_4x1.setEnabled(False)
+                                self.Box_4x1.setPlaceholderText(str(number))
+                                self.Box_4x1.setStyleSheet(colorLine)
+                    elif j == 2:
+                        input = self.Box_4x2.text()
+                        if input != '':
+                            if int(input) == number and self.Box_4x2.isEnabled():
+                                self.Box_4x2.setEnabled(False)
+                                self.Box_4x2.setPlaceholderText(str(number))
+                                self.Box_4x2.setStyleSheet(colorLine)
+                    elif j == 3:
+                        input = self.Box_4x3.text()
+                        if input != '':
+                            if int(input) == number and self.Box_4x3.isEnabled():
+                                self.Box_4x3.setEnabled(False)
+                                self.Box_4x3.setPlaceholderText(str(number))
+                                self.Box_4x3.setStyleSheet(colorLine)
+                    elif j == 4:
+                        input = self.Box_4x4.text()
+                        if input != '':
+                            if int(input) == number and self.Box_4x4.isEnabled():
+                                self.Box_4x4.setEnabled(False)
+                                self.Box_4x4.setPlaceholderText(str(number))
+                                self.Box_4x4.setStyleSheet(colorLine)
+                    elif j == 5:
+                        input = self.Box_4x5.text()
+                        if input != '':
+                            if int(input) == number and self.Box_4x5.isEnabled():
+                                self.Box_4x5.setEnabled(False)
+                                self.Box_4x5.setPlaceholderText(str(number))
+                                self.Box_4x5.setStyleSheet(colorLine)
+                    elif j == 6:
+                        input = self.Box_4x6.text()
+                        if input != '':
+                            if int(input) == number and self.Box_4x6.isEnabled():
+                                self.Box_4x6.setEnabled(False)
+                                self.Box_4x6.setPlaceholderText(str(number))
+                                self.Box_4x6.setStyleSheet(colorLine)
+                    elif j == 7:
+                        input = self.Box_4x7.text()
+                        if input != '':
+                            if int(input) == number and self.Box_4x7.isEnabled():
+                                self.Box_4x7.setEnabled(False)
+                                self.Box_4x7.setPlaceholderText(str(number))
+                                self.Box_4x7.setStyleSheet(colorLine)
+                    elif j == 8:
+                        input = self.Box_4x8.text()
+                        if input != '':
+                            if int(input) == number and self.Box_4x8.isEnabled():
+                                self.Box_4x8.setEnabled(False)
+                                self.Box_4x8.setPlaceholderText(str(number))
+                                self.Box_4x8.setStyleSheet(colorLine)
+                elif i == 5:
+                    if j == 0:
+                        input = self.Box_5x0.text()
+                        if input != '':
+                            if int(input) == number and self.Box_5x0.isEnabled():
+                                self.Box_5x0.setEnabled(False)
+                                self.Box_5x0.setPlaceholderText(str(number))
+                                self.Box_5x0.setStyleSheet(colorLine)
+                    elif j == 1:
+                        input = self.Box_5x1.text()
+                        if input != '':
+                            if int(input) == number and self.Box_5x1.isEnabled():
+                                self.Box_5x1.setEnabled(False)
+                                self.Box_5x1.setPlaceholderText(str(number))
+                                self.Box_5x1.setStyleSheet(colorLine)
+                    elif j == 2:
+                        input = self.Box_5x2.text()
+                        if input != '':
+                            if int(input) == number and self.Box_5x2.isEnabled():
+                                self.Box_5x2.setEnabled(False)
+                                self.Box_5x2.setPlaceholderText(str(number))
+                                self.Box_5x2.setStyleSheet(colorLine)
+                    elif j == 3:
+                        input = self.Box_5x3.text()
+                        if input != '':
+                            if int(input) == number and self.Box_5x3.isEnabled():
+                                self.Box_5x3.setEnabled(False)
+                                self.Box_5x3.setPlaceholderText(str(number))
+                                self.Box_5x3.setStyleSheet(colorLine)
+                    elif j == 4:
+                        input = self.Box_5x4.text()
+                        if input != '':
+                            if int(input) == number and self.Box_5x4.isEnabled():
+                                self.Box_5x4.setEnabled(False)
+                                self.Box_5x4.setPlaceholderText(str(number))
+                                self.Box_5x4.setStyleSheet(colorLine)
+                    elif j == 5:
+                        input = self.Box_5x5.text()
+                        if input != '':
+                            if int(input) == number and self.Box_5x5.isEnabled():
+                                self.Box_5x5.setEnabled(False)
+                                self.Box_5x5.setPlaceholderText(str(number))
+                                self.Box_5x5.setStyleSheet(colorLine)
+                    elif j == 6:
+                        input = self.Box_5x6.text()
+                        if input != '':
+                            if int(input) == number and self.Box_5x6.isEnabled():
+                                self.Box_5x6.setEnabled(False)
+                                self.Box_5x6.setPlaceholderText(str(number))
+                                self.Box_5x6.setStyleSheet(colorLine)
+                    elif j == 7:
+                        input = self.Box_5x7.text()
+                        if input != '':
+                            if int(input) == number and self.Box_5x7.isEnabled():
+                                self.Box_5x7.setEnabled(False)
+                                self.Box_5x7.setPlaceholderText(str(number))
+                                self.Box_5x7.setStyleSheet(colorLine)
+                    elif j == 8:
+                        input = self.Box_5x8.text()
+                        if input != '':
+                            if int(input) == number and self.Box_5x8.isEnabled():
+                                self.Box_5x8.setEnabled(False)
+                                self.Box_5x8.setPlaceholderText(str(number))
+                                self.Box_5x8.setStyleSheet(colorLine)
+                elif i == 6:
+                    if j == 0:
+                        input = self.Box_6x0.text()
+                        if input != '':
+                            if int(input) == number and self.Box_6x0.isEnabled():
+                                self.Box_6x0.setEnabled(False)
+                                self.Box_6x0.setPlaceholderText(str(number))
+                                self.Box_6x0.setStyleSheet(colorLine)
+                    elif j == 1:
+                        input = self.Box_6x1.text()
+                        if input != '':
+                            if int(input) == number and self.Box_6x1.isEnabled():
+                                self.Box_6x1.setEnabled(False)
+                                self.Box_6x1.setPlaceholderText(str(number))
+                                self.Box_6x1.setStyleSheet(colorLine)
+                    elif j == 2:
+                        input = self.Box_6x2.text()
+                        if input != '':
+                            if int(input) == number and self.Box_6x2.isEnabled():
+                                self.Box_6x2.setEnabled(False)
+                                self.Box_6x2.setPlaceholderText(str(number))
+                                self.Box_6x2.setStyleSheet(colorLine)
+                    elif j == 3:
+                        input = self.Box_6x3.text()
+                        if input != '':
+                            if int(input) == number and self.Box_6x3.isEnabled():
+                                self.Box_6x3.setEnabled(False)
+                                self.Box_6x3.setPlaceholderText(str(number))
+                                self.Box_6x3.setStyleSheet(colorLine)
+                    elif j == 4:
+                        input = self.Box_6x4.text()
+                        if input != '':
+                            if int(input) == number and self.Box_6x4.isEnabled():
+                                self.Box_6x4.setEnabled(False)
+                                self.Box_6x4.setPlaceholderText(str(number))
+                                self.Box_6x4.setStyleSheet(colorLine)
+                    elif j == 5:
+                        input = self.Box_6x5.text()
+                        if input != '':
+                            if int(input) == number and self.Box_6x5.isEnabled():
+                                self.Box_6x5.setEnabled(False)
+                                self.Box_6x5.setPlaceholderText(str(number))
+                                self.Box_6x5.setStyleSheet(colorLine)
+                    elif j == 6:
+                        input = self.Box_6x6.text()
+                        if input != '':
+                            if int(input) == number and self.Box_6x6.isEnabled():
+                                self.Box_6x6.setEnabled(False)
+                                self.Box_6x6.setPlaceholderText(str(number))
+                                self.Box_6x6.setStyleSheet(colorLine)
+                    elif j == 7:
+                        input = self.Box_6x7.text()
+                        if input != '':
+                            if int(input) == number and self.Box_6x7.isEnabled():
+                                self.Box_6x7.setEnabled(False)
+                                self.Box_6x7.setPlaceholderText(str(number))
+                                self.Box_6x7.setStyleSheet(colorLine)
+                    elif j == 8:
+                        input = self.Box_6x8.text()
+                        if input != '':
+                            if int(input) == number and self.Box_6x8.isEnabled():
+                                self.Box_6x8.setEnabled(False)
+                                self.Box_6x8.setPlaceholderText(str(number))
+                                self.Box_6x8.setStyleSheet(colorLine)
+                elif i == 7:
+                    if j == 0:
+                        input = self.Box_7x0.text()
+                        if input != '':
+                            if int(input) == number and self.Box_7x0.isEnabled():
+                                self.Box_7x0.setEnabled(False)
+                                self.Box_7x0.setPlaceholderText(str(number))
+                                self.Box_7x0.setStyleSheet(colorLine)
+                    elif j == 1:
+                        input = self.Box_7x1.text()
+                        if input != '':
+                            if int(input) == number and self.Box_7x1.isEnabled():
+                                self.Box_7x1.setEnabled(False)
+                                self.Box_7x1.setPlaceholderText(str(number))
+                                self.Box_7x1.setStyleSheet(colorLine)
+                    elif j == 2:
+                        input = self.Box_7x2.text()
+                        if input != '':
+                            if int(input) == number and self.Box_7x2.isEnabled():
+                                self.Box_7x2.setEnabled(False)
+                                self.Box_7x2.setPlaceholderText(str(number))
+                                self.Box_7x2.setStyleSheet(colorLine)
+                    elif j == 3:
+                        input = self.Box_7x3.text()
+                        if input != '':
+                            if int(input) == number and self.Box_7x3.isEnabled():
+                                self.Box_7x3.setEnabled(False)
+                                self.Box_7x3.setPlaceholderText(str(number))
+                                self.Box_7x3.setStyleSheet(colorLine)
+                    elif j == 4:
+                        input = self.Box_7x4.text()
+                        if input != '':
+                            if int(input) == number and self.Box_7x4.isEnabled():
+                                self.Box_7x4.setEnabled(False)
+                                self.Box_7x4.setPlaceholderText(str(number))
+                                self.Box_7x4.setStyleSheet(colorLine)
+                    elif j == 5:
+                        input = self.Box_7x5.text()
+                        if input != '':
+                            if int(input) == number and self.Box_7x5.isEnabled():
+                                self.Box_7x5.setEnabled(False)
+                                self.Box_7x5.setPlaceholderText(str(number))
+                                self.Box_7x5.setStyleSheet(colorLine)
+                    elif j == 6:
+                        input = self.Box_7x6.text()
+                        if input != '':
+                            if int(input) == number and self.Box_7x6.isEnabled():
+                                self.Box_7x6.setEnabled(False)
+                                self.Box_7x6.setPlaceholderText(str(number))
+                                self.Box_7x6.setStyleSheet(colorLine)
+                    elif j == 7:
+                        input = self.Box_7x7.text()
+                        if input != '':
+                            if int(input) == number and self.Box_7x7.isEnabled():
+                                self.Box_7x7.setEnabled(False)
+                                self.Box_7x7.setPlaceholderText(str(number))
+                                self.Box_7x7.setStyleSheet(colorLine)
+                    elif j == 8:
+                        input = self.Box_7x8.text()
+                        if input != '':
+                            if int(input) == number and self.Box_7x8.isEnabled():
+                                self.Box_7x8.setEnabled(False)
+                                self.Box_7x8.setPlaceholderText(str(number))
+                                self.Box_7x8.setStyleSheet(colorLine)
+                elif i == 8:
+                    if j == 0:
+                        input = self.Box_8x0.text()
+                        if input != '':
+                            if int(input) == number and self.Box_8x0.isEnabled():
+                                self.Box_8x0.setEnabled(False)
+                                self.Box_8x0.setPlaceholderText(str(number))
+                                self.Box_8x0.setStyleSheet(colorLine)
+                    elif j == 1:
+                        input = self.Box_8x1.text()
+                        if input != '':
+                            if int(input) == number and self.Box_8x1.isEnabled():
+                                self.Box_8x1.setEnabled(False)
+                                self.Box_8x1.setPlaceholderText(str(number))
+                                self.Box_8x1.setStyleSheet(colorLine)
+                    elif j == 2:
+                        input = self.Box_8x2.text()
+                        if input != '':
+                            if int(input) == number and self.Box_8x2.isEnabled():
+                                self.Box_8x2.setEnabled(False)
+                                self.Box_8x2.setPlaceholderText(str(number))
+                                self.Box_8x2.setStyleSheet(colorLine)
+                    elif j == 3:
+                        input = self.Box_8x3.text()
+                        if input != '':
+                            if int(input) == number and self.Box_8x3.isEnabled():
+                                self.Box_8x3.setEnabled(False)
+                                self.Box_8x3.setPlaceholderText(str(number))
+                                self.Box_8x3.setStyleSheet(colorLine)
+                    elif j == 4:
+                        input = self.Box_8x4.text()
+                        if input != '':
+                            if int(input) == number and self.Box_8x4.isEnabled():
+                                self.Box_8x4.setEnabled(False)
+                                self.Box_8x4.setPlaceholderText(str(number))
+                                self.Box_8x4.setStyleSheet(colorLine)
+                    elif j == 5:
+                        input = self.Box_8x5.text()
+                        if input != '':
+                            if int(input) == number and self.Box_8x5.isEnabled():
+                                self.Box_8x5.setEnabled(False)
+                                self.Box_8x5.setPlaceholderText(str(number))
+                                self.Box_8x5.setStyleSheet(colorLine)
+                    elif j == 6:
+                        input = self.Box_8x6.text()
+                        if input != '':
+                            if int(input) == number and self.Box_8x6.isEnabled():
+                                self.Box_8x6.setEnabled(False)
+                                self.Box_8x6.setPlaceholderText(str(number))
+                                self.Box_8x6.setStyleSheet(colorLine)
+                    elif j == 7:
+                        input = self.Box_8x7.text()
+                        if input != '':
+                            if int(input) == number and self.Box_8x7.isEnabled():
+                                self.Box_8x7.setEnabled(False)
+                                self.Box_8x7.setPlaceholderText(str(number))
+                                self.Box_8x7.setStyleSheet(colorLine)
+                    elif j == 8:
+                        input = self.Box_8x8.text()
+                        if input != '':
+                            if int(input) == number and self.Box_8x8.isEnabled():
+                                self.Box_8x8.setEnabled(False)
+                                self.Box_8x8.setPlaceholderText(str(number))
+                                self.Box_8x8.setStyleSheet(colorLine)
 
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
@@ -1848,6 +2510,7 @@ class Ui_MainWindow(object):
         font.setPointSize(12)
         self.CheckButton.setFont(font)
         self.CheckButton.setObjectName("CheckButton")
+        self.CheckButton.clicked.connect(self.checkAnswersClick)
         self.SolveButton = QtWidgets.QPushButton(self.centralwidget)
         self.SolveButton.setGeometry(QtCore.QRect(440, 10, 191, 31))
         font = QtGui.QFont()
